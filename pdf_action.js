@@ -46,7 +46,7 @@ $(document).ready(function () {
     document.getElementById('patient_diagnosis').innerText = PERSONAL_DETAILS[6].value;
     document.getElementById('patient_date').innerText = currentDate;
 
-    if (MAPPED_MEDICINE_LIST != null) {
+    if (MAPPED_MEDICINE_LIST != null && MAPPED_MEDICINE_LIST.length != 0) {
         convertJSONDataToHTMLTable(MAPPED_MEDICINE_LIST);
     }
 
