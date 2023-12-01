@@ -3,6 +3,9 @@
 
 $(document).ready(function () {
 
+    // add the buttons
+    document.getElementById('pdf_btn_area').innerHTML = btn_html;
+
     var myData = JSON.parse(localStorage.getItem('ePresObj'));
     //localStorage.removeItem('ePresObj'); // Clear the localStorage
 
@@ -106,8 +109,10 @@ function convertJSONDataToHTMLTable(jsonData) {
 }
 
 function openPrintPDFWindow() {
-    $('#save_pdf').hide();
-    $('#generate_another_btn').hide();
+    //$('#save_pdf').hide();
+    //$('#generate_another_btn').hide();
+
+    document.getElementById('pdf_btn_area').innerHTML = "";
 
     window.print();
 }
@@ -117,17 +122,36 @@ function openGeneratePrescriptionWindow() {
     let loc = window.location.pathname;
     let dir = loc.substring(0, loc.lastIndexOf('/'));
 
-    window.location.href = dir+"/main.html";
+    window.location.href = dir + "/main.html";
 }
 
 
 // handling closing of the print window
 window.addEventListener("afterprint", (event) => {
-    $('#save_pdf').show();
-    $('#generate_another_btn').show();
+    //$('#save_pdf').show();
+    //$('#generate_another_btn').show();
+
+    document.getElementById('pdf_btn_area').innerHTML = btn_html;
 });
 
 // warning not to go back
 //window.onbeforeunload = function() { return "To create new prescription, please use the corresponding button."; };
 
+var btn_html = `<div class="form-group">
+<!-- Button -->
+<div class="col-md-4">
+    <button onclick="openPrintPDFWindow();" type="Button" id="save_pdf" class="btn btn-success">Save
+        E-Prescription <span class="glyphicon glyphicon-save"></span></button>
+</div>
+</div>
 
+<br>
+
+<div class="form-group">
+<!-- Button -->
+<div class="col-md-4">
+    <button type="Button" onclick="openGeneratePrescriptionWindow();" id="generate_another_btn"
+        class="btn btn-warning">Generate Another Prescription <span
+            class="glyphicon glyphicon-refresh"></span></button>
+</div>
+</div>`;
