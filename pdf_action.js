@@ -116,7 +116,7 @@ function openPrintPDFWindow() {
 
     setTimeout(() => {
         window.print();
-    }, 500);
+    }, 3000);
 }
 
 function openGeneratePrescriptionWindow() {
