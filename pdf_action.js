@@ -114,7 +114,9 @@ function openPrintPDFWindow() {
 
     document.getElementById('pdf_btn_area').innerHTML = "";
 
-    window.print();
+    setTimeout(() => {
+        window.print();
+    }, 500);
 }
 
 function openGeneratePrescriptionWindow() {
