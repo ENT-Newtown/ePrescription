@@ -112,7 +112,7 @@ function openPrintPDFWindow() {
     //$('#save_pdf').hide();
     //$('#generate_another_btn').hide();
 
-    document.getElementById('pdf_btn_area').innerHTML = "";
+    //document.getElementById('pdf_btn_area').innerHTML = "";
 
     setTimeout(() => {
         window.print();
@@ -126,6 +126,11 @@ function openGeneratePrescriptionWindow() {
 
     window.location.href = dir + "/main.html";
 }
+
+// handling before printing
+window.onbeforeprint = () => {
+    document.getElementById('pdf_btn_area').innerHTML = "";
+  };
 
 
 // handling closing of the print window
