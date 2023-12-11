@@ -1,4 +1,3 @@
-
 <!-- Developed by Somesh Sarkar -->
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@
   <link rel="apple-touch-icon"
     href="https://static.wixstatic.com/media/8eecc6_c71a8f6b2b9b4cf6966702bbc5d7442c%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/8eecc6_c71a8f6b2b9b4cf6966702bbc5d7442c%7Emv2.png"
     type="image/png" />
-  
+
   <title>ENT Newtown Prescription Generator</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
@@ -31,6 +30,7 @@
 
   <div style="margin-top: 5px;" class="container">
 
+    <!-- HEADER SECTION -->
     <div class="text-left">
       <img style="width: 5%;" src="assests/ENT_logo.jpg">
       <span class="text-center" style="color: chocolate; font-weight: bold;">ENT Newtown</span>
@@ -39,7 +39,9 @@
     <h3 class="text-center" style="color: chocolate; font-weight: bold;">E-Prescription Generator</h3>
 
     <br>
+    <!-- END HEADER SECTION -->
 
+    <!-- PERSONAL DETAILS FORM -->
     <form class="well form-horizontal" action=" " method="post" id="contact_form">
       <fieldset>
 
@@ -137,7 +139,8 @@
             <div class="col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                <input id="diagnosis" name="diagnosis" placeholder="Reason for diagnosis" class="form-control" type="text">
+                <input id="diagnosis" name="diagnosis" placeholder="Reason for diagnosis" class="form-control"
+                  type="text">
               </div>
             </div>
           </div>
@@ -159,7 +162,9 @@
 
       </fieldset>
     </form>
+    <!-- END PERSONAL DETAILS FORM -->
 
+    <!-- MEDICINE DETAILS FORM -->
     <form class="well form-horizontal" action=" " method="post" id="medicine_form">
       <fieldset>
 
@@ -193,6 +198,8 @@
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                 <select id="dosage_schedule" name="dosage_schedule" class="form-control selectpicker">
                   <option value=" ">Please select dosage</option>
+                  <option>3 drops</option>
+                  <option>2 puff</option>
                   <option>Daily</option>
                   <option>Alternate Days</option>
                   <option>Once a week</option>
@@ -250,7 +257,7 @@
 
           <!-- Success message -->
           <div class="alert alert-success" role="alert" id="alert_medicine_success">Success <i
-            class="glyphicon glyphicon-thumbs-up"></i> Move to the next step.
+              class="glyphicon glyphicon-thumbs-up"></i> Move to the next step.
           </div>
 
           <div class="form-group">
@@ -265,7 +272,9 @@
 
       </fieldset>
     </form>
+    <!-- END MEDICINE DETAILS FORM -->
 
+    <!-- SPECIAL NOTES FORM -->
     <form class="well form-horizontal" action=" " method="post" id="notes_form">
       <fieldset>
 
@@ -307,6 +316,8 @@
 
       </fieldset>
     </form>
+    <!-- END SPECIAL NOTES FORM -->
+
 
   </div>
   </div><!-- /.container -->
@@ -319,7 +330,7 @@
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
   <script src="action.js"></script>
-  
+
   <footer class="text-center" style="color: chocolate;">Developed by Somesh Sarkar</footer>
 </body>
 
